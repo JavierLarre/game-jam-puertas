@@ -11,11 +11,16 @@ config_version=5
 [application]
 
 config/name="Puertas"
+run/main_scene="uid://diwkwopowbx2g"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=500
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/scale_mode="integer"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

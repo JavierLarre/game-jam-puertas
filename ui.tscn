@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cokm12bxydbix"]
+
+[ext_resource type="Script" uid="uid://beuddtkpfkmm6" path="res://ui.gd" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://3tvkcd3vjixa" path="res://mouse_text.gd" id="2_m6e0p"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_fyqef")
+
+[node name="MouseText" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("2_m6e0p")
+metadata/_custom_type_script = "uid://3tvkcd3vjixa"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.672
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.10352e-05
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.309804, 0.309804, 0.466667, 0.552941)
+
+[node name="Puertas" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_vertical = 3
