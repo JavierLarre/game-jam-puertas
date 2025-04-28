@@ -1,101 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cokm12bxydbix"]
+[gd_scene load_steps=6 format=3 uid="uid://cokm12bxydbix"]
 
 [ext_resource type="Script" uid="uid://beuddtkpfkmm6" path="res://ui.gd" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://3tvkcd3vjixa" path="res://mouse_text.gd" id="2_m6e0p"]
 [ext_resource type="Texture2D" uid="uid://bw8sv605fenc8" path="res://assets/carpinteria.png" id="3_27fn8"]
-[ext_resource type="Texture2D" uid="uid://c3bxk0e6iioru" path="res://assets/hotel.png" id="4_ibotj"]
-[ext_resource type="Texture2D" uid="uid://stjw6xpir7sj" path="res://assets/linea_de_tren.png" id="5_n5ude"]
-[ext_resource type="PackedScene" uid="uid://crj0lv0ve7ugs" path="res://dialog.tscn" id="6_n5ude"]
-
-[sub_resource type="Animation" id="Animation_waa4j"]
-resource_name = "Arriving"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Hotel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-866, 0), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath("../Hotel:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_ok7cu"]
-resource_name = "Leaving"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Hotel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(864, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath("../Hotel:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_y4yjw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Hotel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-891, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Hotel:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_irxef"]
-_data = {
-&"Arriving": SubResource("Animation_waa4j"),
-&"Leaving": SubResource("Animation_ok7cu"),
-&"RESET": SubResource("Animation_y4yjw")
-}
+[ext_resource type="PackedScene" uid="uid://dqe4kmkbel83k" path="res://buildings_view.tscn" id="4_nltto"]
+[ext_resource type="PackedScene" path="res://dialog.tscn" id="6_n5ude"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_fyqef")
@@ -126,49 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="BuildingsView" type="Control" parent="."]
-z_index = -1
-layout_mode = 3
-anchor_left = 0.28
-anchor_right = 0.73
-anchor_bottom = 0.619
-offset_left = 0.400024
-offset_right = 0.399902
-offset_bottom = 20.48
-
-[node name="Hotel" type="TextureRect" parent="BuildingsView"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -866.0
-offset_right = -866.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_ibotj")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BuildingAnimation" type="AnimationPlayer" parent="BuildingsView/Hotel"]
-root_node = NodePath("../../LineaDeTren")
-libraries = {
-&"": SubResource("AnimationLibrary_irxef")
-}
-
-[node name="LineaDeTren" type="TextureRect" parent="BuildingsView"]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -66.0
-offset_top = 239.0
-offset_bottom = 239.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_n5ude")
-expand_mode = 1
-stretch_mode = 5
+[node name="BuildingsView" parent="." instance=ExtResource("4_nltto")]
 
 [node name="DoneButton" type="Button" parent="."]
 offset_left = 172.0
