@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://o48pnrebmgw2"]
+
+[ext_resource type="Texture2D" uid="uid://bf3l6n6e2lia2" path="res://assets/puerta.png" id="1_ptkhn"]
+[ext_resource type="Script" uid="uid://uce15pj1w6xs" path="res://custom.gd" id="1_todui"]
+[ext_resource type="Texture2D" uid="uid://cg8mbrudvqw17" path="res://assets/manilla1.png" id="2_todui"]
+[ext_resource type="Texture2D" uid="uid://c72tvmax2y70v" path="res://assets/manilla2.png" id="3_15urh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 14.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_todui")
+
+[node name="Puerta" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1492, 550)
+scale = Vector2(0.578949, 0.582825)
+texture = ExtResource("1_ptkhn")
+
+[node name="Manilla1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1415, 552)
+scale = Vector2(0.370605, 0.367188)
+texture = ExtResource("2_todui")
+
+[node name="Manilla2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1415, 568)
+scale = Vector2(0.442383, 0.521484)
+texture = ExtResource("3_15urh")
