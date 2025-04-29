@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://diwkwopowbx2g"]
 
-[ext_resource type="PackedScene" uid="uid://cokm12bxydbix" path="res://ui.tscn" id="1_t3efy"]
+[ext_resource type="PackedScene" uid="uid://cokm12bxydbix" path="res://ui/ui.tscn" id="1_t3efy"]
 
 [node name="Puertas" type="Node2D"]
 
