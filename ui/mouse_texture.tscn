@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfh5eoiimm3wx"]
+
+[ext_resource type="Script" uid="uid://1aqt5clicw1v" path="res://mouse_texture.gd" id="1_tnusf"]
+
+[node name="MouseTexture" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tnusf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DefaultTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqe4kmkbel83k"]
+[gd_scene load_steps=8 format=3 uid="uid://dqe4kmkbel83k"]
 
 [ext_resource type="Texture2D" uid="uid://c3bxk0e6iioru" path="res://assets/hotel.png" id="1_g5gas"]
+[ext_resource type="Script" uid="uid://cjti1xn4ehtfy" path="res://ui/buildings_view.gd" id="1_w14wc"]
 [ext_resource type="Texture2D" uid="uid://stjw6xpir7sj" path="res://assets/linea_de_tren.png" id="2_1pc7p"]
 
 [sub_resource type="Animation" id="Animation_waa4j"]
@@ -102,14 +103,15 @@ anchor_bottom = 0.619
 offset_left = 0.400024
 offset_right = 0.399902
 offset_bottom = 20.48
+script = ExtResource("1_w14wc")
 
 [node name="Hotel" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -891.0
-offset_right = -891.0
+offset_left = -866.0
+offset_right = -866.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_g5gas")
