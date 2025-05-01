@@ -92,6 +92,7 @@ stream = ExtResource("2_usurq")
 stream = ExtResource("3_j5yfy")
 
 [node name="DebugSay" type="VBoxContainer" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.933
 anchor_top = 0.589

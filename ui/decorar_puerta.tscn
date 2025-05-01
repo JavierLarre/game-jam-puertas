@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://gno1bj3nssdf"]
 
-[ext_resource type="Script" uid="uid://cruy8gperf0so" path="res://door_test.gd" id="1_ckemi"]
-[ext_resource type="PackedScene" uid="uid://cfh5eoiimm3wx" path="res://ui/mouse_texture.tscn" id="2_unc8j"]
-[ext_resource type="Texture2D" uid="uid://bf3l6n6e2lia2" path="res://assets/puerta.png" id="3_floda"]
+[ext_resource type="Script" uid="uid://cruy8gperf0so" path="res://door_test.gd" id="1_qptrn"]
+[ext_resource type="Texture2D" uid="uid://bf3l6n6e2lia2" path="res://assets/puerta.png" id="2_yhva0"]
+[ext_resource type="PackedScene" uid="uid://cfh5eoiimm3wx" path="res://ui/mouse_texture.tscn" id="3_312pi"]
 
-[node name="door_test" type="Control"]
+[node name="DecorarPuerta" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ckemi")
+mouse_filter = 2
+script = ExtResource("1_qptrn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -20,11 +21,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_floda")
+mouse_filter = 2
+texture = ExtResource("2_yhva0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MouseTexture" parent="." instance=ExtResource("2_unc8j")]
+[node name="MouseTexture" parent="." instance=ExtResource("3_312pi")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -37,6 +39,7 @@ offset_right = -734.0
 offset_bottom = -159.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -44,4 +47,5 @@ offset_left = 83.0
 offset_top = 189.0
 offset_right = 195.0
 offset_bottom = 393.0
+mouse_filter = 1
 text = "omg"
