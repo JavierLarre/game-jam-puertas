@@ -13,5 +13,5 @@ func bring_building() -> void:
 func send_building() -> void:
 	building_animation.play("Leaving")
 
-func emit_building_signal(animation_name) -> void:
+func emit_building_signal(_animation_name) -> void:
 	building_stopped_moving.emit()

@@ -2,19 +2,26 @@ extends Button
 
 var building_view
 var is_building_here := false
+var is_locked := false
+
 
 func _ready() -> void:
 	text = "Traer Hotel"
 
 func _pressed() -> void:
-	print("waos")
-	if not is_building_here:
-		building_view.building_stopped_moving.connect(change_text)
-	if is_building_here:
-		building_view.send_building()
-	else:
-		building_view.bring_building()
-		is_building_here = true
-		
-func change_text():
-	text = "Enviar hotel"
+	if not is_locked:
+		is_locked = true
+		if not is_building_here:
+			is_building_here = true
+			building_view.bring_building()
+			await building_view.building_stopped_moving
+			print("a")
+
+			text = "Enviar Hotel"
+		else:
+			is_building_here = false
+			building_view.send_building()
+			await building_view.building_stopped_moving
+
+			text = "Traer Hotel"
+		is_locked = false

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfh5eoiimm3wx" path="res://ui/mouse_texture.tscn" id="3_312pi"]
 
 [node name="DecorarPuerta" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_qptrn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -19,6 +20,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="MouseTexture" parent="." instance=ExtResource("3_312pi")]
+mouse_filter = 2
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -31,7 +33,6 @@ offset_right = -734.0
 offset_bottom = -159.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
 
 [node name="Button" type="Button" parent="."]
 offset_left = 83.0
