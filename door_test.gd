@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 func _ready() -> void:
 	$Button.pressed.connect(place_texture)

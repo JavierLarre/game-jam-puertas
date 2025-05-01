@@ -8,7 +8,8 @@ func _ready() -> void:
 
 func _pressed() -> void:
 	print("waos")
-	building_view.building_stopped_moving.connect(change_text)
+	if not is_building_here:
+		building_view.building_stopped_moving.connect(change_text)
 	if is_building_here:
 		building_view.send_building()
 	else:

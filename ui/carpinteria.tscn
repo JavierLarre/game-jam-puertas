@@ -5,17 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://dqe4kmkbel83k" path="res://ui/buildings_view.tscn" id="3_85167"]
 [ext_resource type="Script" uid="uid://tac70xff1ywq" path="res://ui/building_button.gd" id="4_7ieqe"]
 
-[node name="Carpinteria" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Carpinteria" type="CanvasLayer"]
 script = ExtResource("1_5qp4n")
 
 [node name="TexturaCarpinteria" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -25,12 +18,10 @@ texture = ExtResource("2_dxaw4")
 expand_mode = 1
 
 [node name="BuildingsView" parent="." instance=ExtResource("3_85167")]
-layout_mode = 1
 offset_left = 2.40002
 offset_right = 2.3999
 
 [node name="BuildingButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 172.0
 offset_top = 58.0
 offset_right = 420.0

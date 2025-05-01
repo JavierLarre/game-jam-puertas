@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 @onready var building_animation: AnimationPlayer = $Hotel/BuildingAnimation
 

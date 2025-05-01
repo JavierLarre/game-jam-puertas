@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal building_arrived
 signal building_sent
