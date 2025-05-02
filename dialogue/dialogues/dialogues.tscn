@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://emn68ltpry6q"]
+
+[ext_resource type="Script" uid="uid://b8dbdwno7duxk" path="res://dialogue/dialogues/dialogues.gd" id="1_3x4od"]
+[ext_resource type="PackedScene" uid="uid://pu20fbbg122j" path="res://dialogue/dialog.tscn" id="1_qbbjj"]
+
+[node name="Dialogues" type="Node"]
+script = ExtResource("1_3x4od")
+
+[node name="Dialog" parent="." instance=ExtResource("1_qbbjj")]
+layer = 2
+visible = false

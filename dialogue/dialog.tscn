@@ -98,6 +98,7 @@ stream = ExtResource("2_usurq")
 
 [node name="Hinge" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_j5yfy")
+volume_db = -10.0
 
 [node name="DebugSay" type="VBoxContainer" parent="."]
 visible = false
