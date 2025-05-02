@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://pu20fbbg122j"]
+[gd_scene load_steps=7 format=3 uid="uid://pu20fbbg122j"]
 
 [ext_resource type="Script" uid="uid://t8iqf6ew8740" path="res://dialogue/dialog.gd" id="1_fhvxk"]
+[ext_resource type="PackedScene" uid="uid://cncfa2pbvibl4" path="res://catpintero.tscn" id="2_j5yfy"]
 [ext_resource type="AudioStream" uid="uid://bc4i0faa5qu6k" path="res://assets/meow.ogg" id="2_usurq"]
 [ext_resource type="AudioStream" uid="uid://rfwg5lpubmrc" path="res://assets/hinge.ogg" id="3_j5yfy"]
 [ext_resource type="Script" uid="uid://bkcuebk6db8v8" path="res://dialogue/debug_say.gd" id="4_6by1v"]
@@ -21,6 +22,13 @@ name_label = NodePath("Name/MarginContainer/RichTextLabel")
 content_label = NodePath("Contents/MarginContainer/RichTextLabel")
 meow_sound = NodePath("Meow")
 squeak_sound = NodePath("Hinge")
+
+[node name="Catpintero" parent="." instance=ExtResource("2_j5yfy")]
+offset_left = -12.0
+offset_top = 93.0
+offset_right = -12.0
+offset_bottom = 93.0
+scale = Vector2(1.2, 1.2)
 
 [node name="Contents" type="PanelContainer" parent="."]
 anchors_preset = -1

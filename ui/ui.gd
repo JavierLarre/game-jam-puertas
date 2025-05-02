@@ -6,6 +6,7 @@ extends CanvasLayer
 func _ready() -> void:
 	$Menu/Button.pressed.connect(remove_menu)
 	$Carpinteria.building_arrived.connect(show_puerta)
+	$Carpinteria.building_sent.connect(hide_puerta)
 	
 func remove_menu() -> void:
 	remove_child($Menu)
@@ -20,3 +21,6 @@ func _input(event: InputEvent) -> void:
 
 func show_puerta():
 	$DecorarPuerta.visible = true
+
+func hide_puerta():
+	$DecorarPuerta.visible = false

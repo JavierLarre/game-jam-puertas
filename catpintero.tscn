@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cncfa2pbvibl4"]
+
+[ext_resource type="Texture2D" uid="uid://b86i7f8yjcxsf" path="res://assets/Cabeza_Catpintero_PNG.png" id="1_sgbht"]
+[ext_resource type="Texture2D" uid="uid://5uws0k7qqocp" path="res://assets/Cuerpo_Catpintero_PNG.png" id="1_wj4p6"]
+
+[node name="Catpintero" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 113.0
+offset_bottom = 110.0
+
+[node name="Cuerpintero" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 377.0
+offset_right = 469.0
+offset_bottom = 875.0
+texture = ExtResource("1_wj4p6")
+stretch_mode = 5
+
+[node name="Cabezapintero" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 443.0
+offset_bottom = 581.0
+texture = ExtResource("1_sgbht")
+stretch_mode = 5
