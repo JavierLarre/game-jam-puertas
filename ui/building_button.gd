@@ -15,7 +15,6 @@ func _pressed() -> void:
 			is_building_here = true
 			building_view.bring_building()
 			await building_view.building_stopped_moving
-			print("a")
 
 			text = "Enviar Hotel"
 		else:
