@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://bo2w5rx77klos"]
+
+[ext_resource type="Texture2D" uid="uid://8ml3o4wcsosd" path="res://assets/Ilustracion_sin_titulo.png" id="1_5fk4w"]
+[ext_resource type="Script" uid="uid://h8hepgnt35ih" path="res://no se que hago/scripttt.gd" id="1_fjuix"]
+
+[sub_resource type="Shader" id="Shader_pm6x3"]
+code = "shader_type canvas_item;
+
+uniform vec4 target_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform vec4 base_color = vec4(0.6039, 0.6039, 0.6039, 1.0);
+
+void fragment() {
+	vec4 tex_color = texture(TEXTURE, UV);
+	if (distance(tex_color.rgb, base_color.rgb) < 0.1) {
+		COLOR = vec4(target_color.rgb, tex_color.a);
+	} else {
+		COLOR = tex_color;
+	}
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ftomg"]
+shader = SubResource("Shader_pm6x3")
+shader_parameter/target_color = Vector4(1, 1, 1, 1)
+shader_parameter/base_color = Vector4(0.5569, 0.5569, 0.5569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjuix"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ah4kr"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lol4s"]
+bg_color = Color(0, 0, 1, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fjuix")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ftomg")
+position = Vector2(502.5, 525)
+scale = Vector2(0.442871, 0.491211)
+texture = ExtResource("1_5fk4w")
+
+[node name="Rojo" type="Button" parent="."]
+offset_left = 1139.0
+offset_top = 209.0
+offset_right = 1294.0
+offset_bottom = 350.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fjuix")
+
+[node name="Verde" type="Button" parent="."]
+offset_left = 1133.0
+offset_top = 454.0
+offset_right = 1288.0
+offset_bottom = 595.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ah4kr")
+
+[node name="Azul" type="Button" parent="."]
+offset_left = 1428.0
+offset_top = 208.0
+offset_right = 1583.0
+offset_bottom = 349.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lol4s")
