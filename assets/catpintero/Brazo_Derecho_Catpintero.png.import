@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5uws0k7qqocp"
-path="res://.godot/imported/Cuerpo_Catpintero_PNG.png-69f710cee051160bcc410990d345d59c.ctex"
+uid="uid://h2uah31bnn5u"
+path="res://.godot/imported/Brazo_Derecho_Catpintero.png-c534122ec4ab88e4e72833a6e69f79ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cuerpo_Catpintero_PNG.png"
-dest_files=["res://.godot/imported/Cuerpo_Catpintero_PNG.png-69f710cee051160bcc410990d345d59c.ctex"]
+source_file="res://assets/catpintero/Brazo_Derecho_Catpintero.png"
+dest_files=["res://.godot/imported/Brazo_Derecho_Catpintero.png-c534122ec4ab88e4e72833a6e69f79ae.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b86i7f8yjcxsf"
-path="res://.godot/imported/Cabeza_Catpintero_PNG.png-316a9b87d88e2474ef881f4d69f5bfa1.ctex"
+path="res://.godot/imported/Cabeza_Catpintero_PNG.png-58c54450b41f0801d24590adba1e5bd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cabeza_Catpintero_PNG.png"
-dest_files=["res://.godot/imported/Cabeza_Catpintero_PNG.png-316a9b87d88e2474ef881f4d69f5bfa1.ctex"]
+source_file="res://assets/catpintero/Cabeza_Catpintero_PNG.png"
+dest_files=["res://.godot/imported/Cabeza_Catpintero_PNG.png-58c54450b41f0801d24590adba1e5bd1.ctex"]
 
 [params]
 

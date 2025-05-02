@@ -1,25 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://cncfa2pbvibl4"]
+[gd_scene load_steps=10 format=3 uid="uid://cncfa2pbvibl4"]
 
-[ext_resource type="Texture2D" uid="uid://b86i7f8yjcxsf" path="res://assets/Cabeza_Catpintero_PNG.png" id="1_sgbht"]
-[ext_resource type="Texture2D" uid="uid://5uws0k7qqocp" path="res://assets/Cuerpo_Catpintero_PNG.png" id="1_wj4p6"]
+[ext_resource type="Texture2D" uid="uid://h2uah31bnn5u" path="res://assets/catpintero/Brazo_Derecho_Catpintero.png" id="1_havh1"]
+[ext_resource type="Texture2D" uid="uid://b86i7f8yjcxsf" path="res://assets/catpintero/Cabeza_Catpintero_PNG.png" id="1_sgbht"]
+[ext_resource type="Texture2D" uid="uid://5uws0k7qqocp" path="res://assets/catpintero/Cuerpo_Catpintero_PNG.png" id="1_wj4p6"]
+[ext_resource type="Texture2D" uid="uid://ccb85ve5y5cbs" path="res://assets/catpintero/Brazo_Izquierdo_Catpintero.png" id="3_s4xbd"]
+[ext_resource type="Texture2D" uid="uid://dj7b2xbak26me" path="res://assets/catpintero/Cejas_Catpintero.png" id="5_u3eus"]
+[ext_resource type="Texture2D" uid="uid://16a67rb4kyr7" path="res://assets/catpintero/Bigotitos_Cejas_Catpintero.png" id="6_0kuf0"]
+[ext_resource type="Texture2D" uid="uid://kpev8p3j3trr" path="res://assets/catpintero/Bigotitos_Izquierdos_Catpintero.png" id="7_g34i5"]
+[ext_resource type="Texture2D" uid="uid://cnejiub1ftpsu" path="res://assets/catpintero/Bigotitos_Derechos_Catpintero.png" id="8_irmf4"]
+[ext_resource type="Texture2D" uid="uid://blbkib282v0u2" path="res://assets/catpintero/Lentes_Catpintero_PNG.png" id="9_s4xbd"]
 
-[node name="Catpintero" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 113.0
-offset_bottom = 110.0
+[node name="Catpintero" type="Node2D"]
 
-[node name="Cuerpintero" type="TextureRect" parent="."]
-layout_mode = 0
-offset_top = 377.0
-offset_right = 469.0
-offset_bottom = 875.0
+[node name="BrazoDerechoCatpintero" type="Sprite2D" parent="."]
+position = Vector2(413, 490)
+texture = ExtResource("1_havh1")
+
+[node name="Cuerpintero" type="Sprite2D" parent="."]
+position = Vector2(283, 615)
 texture = ExtResource("1_wj4p6")
-stretch_mode = 5
 
-[node name="Cabezapintero" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 443.0
-offset_bottom = 581.0
+[node name="BrazoIzquierdoCatpintero" type="Sprite2D" parent="."]
+position = Vector2(212, 592)
+texture = ExtResource("3_s4xbd")
+
+[node name="Cabezapintero" type="Sprite2D" parent="."]
+position = Vector2(234, 319)
 texture = ExtResource("1_sgbht")
-stretch_mode = 5
+
+[node name="CejasCatpintero" type="Sprite2D" parent="."]
+position = Vector2(273, 308)
+texture = ExtResource("5_u3eus")
+
+[node name="BigotitosCejasCatpintero" type="Sprite2D" parent="."]
+position = Vector2(271, 263)
+scale = Vector2(1.14574, 1.1092)
+texture = ExtResource("6_0kuf0")
+
+[node name="BigotitosIzquierdosCatpintero" type="Sprite2D" parent="."]
+position = Vector2(233, 408)
+texture = ExtResource("7_g34i5")
+
+[node name="BigotitosDerechosCatpintero" type="Sprite2D" parent="."]
+position = Vector2(367, 341)
+texture = ExtResource("8_irmf4")
+
+[node name="LentesCatpinteroPng" type="Sprite2D" parent="."]
+position = Vector2(264, 329)
+texture = ExtResource("9_s4xbd")

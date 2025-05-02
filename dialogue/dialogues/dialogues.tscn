@@ -11,10 +11,8 @@ script = ExtResource("1_3x4od")
 
 [node name="Catpintero" parent="." instance=ExtResource("3_yu45q")]
 visible = false
-offset_left = -45.0
-offset_top = 258.0
-offset_right = 68.0
-offset_bottom = 368.0
+position = Vector2(-93, 135)
+scale = Vector2(1.2, 1.2)
 
 [node name="Hotel" type="TextureRect" parent="."]
 visible = false
