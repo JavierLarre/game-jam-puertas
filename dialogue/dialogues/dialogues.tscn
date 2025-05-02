@@ -1,10 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://emn68ltpry6q"]
+[gd_scene load_steps=5 format=3 uid="uid://emn68ltpry6q"]
 
 [ext_resource type="Script" uid="uid://b8dbdwno7duxk" path="res://dialogue/dialogues/dialogues.gd" id="1_3x4od"]
 [ext_resource type="PackedScene" uid="uid://pu20fbbg122j" path="res://dialogue/dialog.tscn" id="1_qbbjj"]
+[ext_resource type="PackedScene" uid="uid://cncfa2pbvibl4" path="res://catpintero.tscn" id="3_yu45q"]
+[ext_resource type="Texture2D" uid="uid://c3bxk0e6iioru" path="res://assets/hotel.png" id="4_5erkb"]
 
-[node name="Dialogues" type="Node"]
+[node name="Dialogues" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_3x4od")
+
+[node name="Catpintero" parent="." instance=ExtResource("3_yu45q")]
+visible = false
+offset_left = -45.0
+offset_top = 258.0
+offset_right = 68.0
+offset_bottom = 368.0
+
+[node name="Hotel" type="TextureRect" parent="."]
+visible = false
+offset_left = 1201.0
+offset_top = 182.0
+offset_right = 2220.0
+offset_bottom = 1111.0
+texture = ExtResource("4_5erkb")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Dialog" parent="." instance=ExtResource("1_qbbjj")]
 layer = 2

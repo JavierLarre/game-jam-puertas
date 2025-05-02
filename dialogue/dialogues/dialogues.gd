@@ -26,19 +26,29 @@ func play_next_dialogue():
 
 func play_dialogue():
 	if dialogue_id >= current_dialogue_group.size():
+		hide_characters()
 		$Dialog.visible = false
 		is_playing_dialogue = false
-		print("hiding!")
 	if not is_playing_dialogue:
 		return
 	var dialogue = current_dialogue_group[dialogue_id]
 	dialogue_id += 1
 	var character_name = dialogue[0]
+	show_character(character_name)
 	var dialogue_text = dialogue[1]
 	var sound_type = dialogue[2]
 	$Dialog.visible = true
 	$Dialog.show_text(character_name, dialogue_text, sound_type)
 	
+func hide_characters():
+	$Catpintero.visible = false
+	$Hotel.visible = false
+	
+func show_character(character_name: String):
+	if character_name == "Catpintero":
+		$Catpintero.visible = true
+	else:
+		$Hotel.visible = true
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
