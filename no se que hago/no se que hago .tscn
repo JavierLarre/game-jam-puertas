@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bo2w5rx77klos"]
+[gd_scene load_steps=12 format=3 uid="uid://bo2w5rx77klos"]
 
 [ext_resource type="Script" uid="uid://h8hepgnt35ih" path="res://no se que hago/scripttt.gd" id="1_fjuix"]
 [ext_resource type="Shader" uid="uid://cr5e5b4l461dy" path="res://no se que hago/no se que hago .gdshader" id="2_ah4kr"]
 [ext_resource type="Texture2D" uid="uid://c2ei6171vs58h" path="res://assets/door.png" id="2_fjuix"]
 [ext_resource type="Texture2D" uid="uid://dv20ako02n5cf" path="res://assets/manilla_1.png" id="4_lol4s"]
 [ext_resource type="Texture2D" uid="uid://bj86ckw2y0yk7" path="res://assets/face.png" id="5_ca82h"]
+[ext_resource type="Texture2D" uid="uid://5nciyh0ib4uf" path="res://assets/pikapika.png" id="6_y1c1o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lol4s"]
 shader = ExtResource("2_ah4kr")
@@ -25,6 +26,11 @@ bg_color = Color(0.947791, 0.827554, 0.521402, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fjuix")
+
+[node name="pikachu" type="Sprite2D" parent="."]
+position = Vector2(503, 492)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("6_y1c1o")
 
 [node name="Puerta" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_lol4s")
