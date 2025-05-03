@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bmnljh31buonj" path="res://ui/carpinteria.tscn" id="2_wl5ax"]
 [ext_resource type="PackedScene" uid="uid://gno1bj3nssdf" path="res://ui/decorar_puerta.tscn" id="3_vkava"]
 [ext_resource type="PackedScene" uid="uid://emn68ltpry6q" path="res://dialogue/dialogues/dialogues.tscn" id="4_vkava"]
-[ext_resource type="Shader" uid="uid://2svldsggochn" path="res://ui/cursed.gdshader" id="5_tf0e0"]
+[ext_resource type="Shader" path="res://ui/cursed.gdshader" id="5_tf0e0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_obcwv"]
 shader = ExtResource("5_tf0e0")

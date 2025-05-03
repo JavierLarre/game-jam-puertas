@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://h2uah31bnn5u" path="res://assets/catpintero/Brazo_Derecho_Catpintero.png" id="1_havh1"]
 [ext_resource type="Texture2D" uid="uid://b86i7f8yjcxsf" path="res://assets/catpintero/Cabeza_Catpintero_PNG.png" id="1_sgbht"]
-[ext_resource type="Material" uid="uid://bgrqf5dfnrgvs" path="res://catpintero.tres" id="1_u3eus"]
+[ext_resource type="Script" uid="uid://taw55eygm885" path="res://catpintero.gd" id="1_u3eus"]
 [ext_resource type="Texture2D" uid="uid://5uws0k7qqocp" path="res://assets/catpintero/Cuerpo_Catpintero_PNG.png" id="1_wj4p6"]
 [ext_resource type="Texture2D" uid="uid://ccb85ve5y5cbs" path="res://assets/catpintero/Brazo_Izquierdo_Catpintero.png" id="3_s4xbd"]
 [ext_resource type="Texture2D" uid="uid://dj7b2xbak26me" path="res://assets/catpintero/Cejas_Catpintero.png" id="5_u3eus"]
@@ -12,10 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://blbkib282v0u2" path="res://assets/catpintero/Lentes_Catpintero_PNG.png" id="9_s4xbd"]
 
 [node name="Catpintero" type="Node2D"]
-material = ExtResource("1_u3eus")
+script = ExtResource("1_u3eus")
 
 [node name="BrazoDerechoCatpintero" type="Sprite2D" parent="."]
-material = ExtResource("1_u3eus")
 position = Vector2(413, 490)
 texture = ExtResource("1_havh1")
 

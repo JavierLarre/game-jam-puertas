@@ -11,6 +11,7 @@ script = ExtResource("1_3x4od")
 
 [node name="Catpintero" parent="." instance=ExtResource("3_yu45q")]
 visible = false
+material = null
 position = Vector2(-93, 135)
 scale = Vector2(1.2, 1.2)
 
