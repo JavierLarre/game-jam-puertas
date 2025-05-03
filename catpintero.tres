@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bgrqf5dfnrgvs"]
+
+[ext_resource type="Shader" uid="uid://cpy8hhfb3yjf6" path="res://catpintero.gdshader" id="1_gu0dt"]
+
+[resource]
+shader = ExtResource("1_gu0dt")
+shader_parameter/time_speed = 1.0
+shader_parameter/pastel_shift = 0.1
+shader_parameter/outer_glow_strength = 0.1
+shader_parameter/sparkle_speed = 8.0
