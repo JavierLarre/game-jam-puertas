@@ -1,9 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqe4kmkbel83k"]
+[gd_scene load_steps=11 format=3 uid="uid://dqe4kmkbel83k"]
 
 [ext_resource type="Texture2D" uid="uid://c3bxk0e6iioru" path="res://assets/hotel.png" id="1_g5gas"]
 [ext_resource type="Script" uid="uid://cjti1xn4ehtfy" path="res://ui/buildings_view.gd" id="1_w14wc"]
 [ext_resource type="Texture2D" uid="uid://stjw6xpir7sj" path="res://assets/linea_de_tren.png" id="2_1pc7p"]
+[ext_resource type="Shader" uid="uid://ds6381sik0y7g" path="res://ui/dios.gdshader" id="2_kpcvh"]
 [ext_resource type="AudioStream" uid="uid://cxocv2b2w5u65" path="res://assets/explosion.wav" id="4_wd3uf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vbkt4"]
+shader = ExtResource("2_kpcvh")
+shader_parameter/time_speed = 5.0
+shader_parameter/wobble_strength = 0.05
+shader_parameter/rgb_split = 0.02
 
 [sub_resource type="Animation" id="Animation_waa4j"]
 resource_name = "Arriving"
@@ -107,12 +114,13 @@ offset_bottom = 20.48
 script = ExtResource("1_w14wc")
 
 [node name="Hotel" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_vbkt4")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -866.0
-offset_right = -866.0
+offset_left = -891.0
+offset_right = -891.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
