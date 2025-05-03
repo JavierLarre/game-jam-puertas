@@ -24,3 +24,5 @@ func _pressed() -> void:
 
 			text = "Traer Hotel"
 		is_locked = false
+		if text == "Traer Hotel":
+			_pressed()

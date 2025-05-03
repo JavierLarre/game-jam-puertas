@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bo2w5rx77klos"]
+[gd_scene load_steps=15 format=3 uid="uid://bo2w5rx77klos"]
 
 [ext_resource type="Script" uid="uid://h8hepgnt35ih" path="res://no se que hago/scripttt.gd" id="1_fjuix"]
 [ext_resource type="Shader" uid="uid://cr5e5b4l461dy" path="res://no se que hago/no se que hago .gdshader" id="2_ah4kr"]
 [ext_resource type="Texture2D" uid="uid://c2ei6171vs58h" path="res://assets/door.png" id="2_fjuix"]
 [ext_resource type="Texture2D" uid="uid://dv20ako02n5cf" path="res://assets/manilla_1.png" id="4_lol4s"]
 [ext_resource type="Texture2D" uid="uid://bj86ckw2y0yk7" path="res://assets/face.png" id="5_ca82h"]
+[ext_resource type="Shader" uid="uid://2svldsggochn" path="res://ui/cursed.gdshader" id="6_qpxlt"]
 [ext_resource type="Texture2D" uid="uid://5nciyh0ib4uf" path="res://assets/pikapika.png" id="6_y1c1o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lol4s"]
@@ -15,6 +16,9 @@ shader_parameter/base_color = Vector4(0, 1, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjuix"]
 bg_color = Color(0.688901, 0.445199, 0.595136, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jdhol"]
+shader = ExtResource("6_qpxlt")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ah4kr"]
 bg_color = Color(0.922926, 0.876383, 0.898513, 1)
 
@@ -23,6 +27,9 @@ bg_color = Color(0.6535, 0.339463, 0.215975, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca82h"]
 bg_color = Color(0.947791, 0.827554, 0.521402, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpxlt"]
+shader = ExtResource("6_qpxlt")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fjuix")
@@ -44,31 +51,39 @@ scale = Vector2(0.442871, 0.491211)
 texture = ExtResource("4_lol4s")
 
 [node name="Rojo" type="Button" parent="."]
-offset_left = 1169.0
-offset_top = 137.0
-offset_right = 1324.0
-offset_bottom = 278.0
+offset_left = 852.0
+offset_top = 221.0
+offset_right = 1007.0
+offset_bottom = 362.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fjuix")
+
+[node name="Rojo2" type="Button" parent="."]
+material = SubResource("ShaderMaterial_jdhol")
+offset_left = 55.0
+offset_top = 414.0
+offset_right = 210.0
+offset_bottom = 555.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_fjuix")
 
 [node name="Verde" type="Button" parent="."]
-offset_left = 1503.0
-offset_top = 136.0
-offset_right = 1658.0
-offset_bottom = 277.0
+offset_left = 1336.0
+offset_top = 102.0
+offset_right = 1491.0
+offset_bottom = 243.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ah4kr")
 
 [node name="Azul" type="Button" parent="."]
-offset_left = 1343.0
-offset_top = 124.0
-offset_right = 1498.0
-offset_bottom = 265.0
+offset_left = 1069.0
+offset_top = 45.0
+offset_right = 1224.0
+offset_bottom = 186.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_lol4s")
 
 [node name="OptionButton" type="OptionButton" parent="."]
-offset_left = 1327.0
-offset_top = 343.0
-offset_right = 1792.0
-offset_bottom = 405.0
+offset_left = 969.0
+offset_top = 671.0
+offset_right = 1434.0
+offset_bottom = 733.0
 size_flags_horizontal = 8
 item_count = 3
 popup/item_0/text = "Manilla 1"
@@ -79,10 +94,10 @@ popup/item_2/text = "Manilla 3"
 popup/item_2/id = 2
 
 [node name="OptionButton2" type="OptionButton" parent="."]
-offset_left = 1300.0
-offset_top = 428.0
-offset_right = 1765.0
-offset_bottom = 490.0
+offset_left = 942.0
+offset_top = 756.0
+offset_right = 1407.0
+offset_bottom = 818.0
 size_flags_horizontal = 8
 item_count = 3
 popup/item_0/text = "Manilla 1"
@@ -98,8 +113,88 @@ scale = Vector2(0.12207, 0.12207)
 texture = ExtResource("5_ca82h")
 
 [node name="Verde2" type="Button" parent="."]
-offset_left = 1677.0
-offset_top = 145.0
-offset_right = 1832.0
-offset_bottom = 286.0
+offset_left = 1596.0
+offset_top = 48.0
+offset_right = 1751.0
+offset_bottom = 189.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde3" type="Button" parent="."]
+offset_left = 1171.0
+offset_top = 327.0
+offset_right = 1326.0
+offset_bottom = 468.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde4" type="Button" parent="."]
+offset_left = 1342.0
+offset_top = 327.0
+offset_right = 1497.0
+offset_bottom = 468.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde5" type="Button" parent="."]
+offset_left = 1631.0
+offset_top = 834.0
+offset_right = 1786.0
+offset_bottom = 975.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde6" type="Button" parent="."]
+offset_left = 1657.0
+offset_top = 330.0
+offset_right = 1812.0
+offset_bottom = 471.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde7" type="Button" parent="."]
+offset_left = 1061.0
+offset_top = 488.0
+offset_right = 1216.0
+offset_bottom = 629.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde8" type="Button" parent="."]
+offset_left = 784.0
+offset_top = 889.0
+offset_right = 939.0
+offset_bottom = 1030.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde9" type="Button" parent="."]
+offset_left = 1462.0
+offset_top = 685.0
+offset_right = 1617.0
+offset_bottom = 826.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Verde10" type="Button" parent="."]
+offset_left = 1625.0
+offset_top = 529.0
+offset_right = 1780.0
+offset_bottom = 670.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 566.0
+offset_right = 203.0
+offset_bottom = 615.0
+text = "COMPRA VIP PARA
+USAR COLOR"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 621.0
+offset_right = 227.0
+offset_bottom = 670.0
+theme_override_colors/font_color = Color(1.66051e-05, 0.8428, 7.70092e-07, 1)
+text = "1500 ROBUX"
+
+[node name="Label2" type="Label" parent="."]
+material = SubResource("ShaderMaterial_qpxlt")
+offset_left = 165.0
+offset_top = 592.0
+offset_right = 238.0
+offset_bottom = 615.0
+text = "ARCOIRIS"

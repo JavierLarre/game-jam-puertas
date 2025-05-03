@@ -25,6 +25,10 @@ func _ready():
 	boton_azul.pressed.connect(func(): cambiar_color(Color("a75737")))
 	boton_verde.pressed.connect(func(): cambiar_color(Color("ebdfe5")))
 	boton_verde2.pressed.connect(func(): cambiar_color(Color("f2d385"), true))
+	for wa in get_children():
+		if "Verde" in wa.name:
+			if wa.name != "Verde":
+				wa.pressed.connect(func(): cambiar_color(Color("f2d385"), true))
 	opciones_manilla.item_selected.connect(cambiar_manilla)
 	opciones_cara.item_selected.connect(cambiar_cara)
 

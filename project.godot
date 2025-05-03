@@ -15,6 +15,10 @@ run/main_scene="uid://diwkwopowbx2g"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueDB="*res://shitpost_dialogues.gd"
+
 [display]
 
 window/size/viewport_width=1920

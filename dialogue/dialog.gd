@@ -14,6 +14,11 @@ enum SoundType
 func show_text(speaker_name: String, content: String, sound_type: SoundType = SoundType.SQUEAK):
 	name_label.text = speaker_name
 	content_label.text = content
+	if sound_type == SoundType.CAT:
+		content_label.text = DialogueDB.SHITPOST_DIALOGUES[randi() % DialogueDB.SHITPOST_DIALOGUES.size()]
+	else:
+		name_label.text = "Cliente"
+		content_label.text = DialogueDB.SHITPOST_QUOTES_BUILDINGS[randi() % DialogueDB.SHITPOST_QUOTES_BUILDINGS.size()]
 
 	var sound: AudioStreamPlayer
 	if sound_type == SoundType.CAT:

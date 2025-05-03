@@ -13,7 +13,10 @@ var is_playing_dialogue := false
 
 	
 func update_group():
-	current_dialogue_group = dialogue_groups[group_id]
+	if group_id >= dialogue_groups.size():
+		current_dialogue_group = dialogue_groups[dialogue_groups.size() - 1]
+	else:
+		current_dialogue_group = dialogue_groups[group_id]
 	group_id += 1
 	dialogue_id = 0
 
@@ -64,8 +67,11 @@ var dialogue_groups := [
 		["Catpintero", "De inmediato!", SoundType.CAT],
 	],
 	[
-		["Hotel", "Me encanta!", SoundType.SQUEAK],
+		["Hotel", "dame una puerta :c", SoundType.SQUEAK],
 		["Catpintero", "Muchas gracias!", SoundType.CAT],
 	],
-	[]
+	[
+		["Hotel", "Me voy a morir si no me das una puerta ahora mismo.", SoundType.SQUEAK],
+		["Catpintero", "", SoundType.CAT]
+	]
 ]

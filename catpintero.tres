@@ -4,3 +4,7 @@
 
 [resource]
 shader = ExtResource("1_gu0dt")
+shader_parameter/time_speed = 2.5
+shader_parameter/glow_strength = 0.15
+shader_parameter/pastel_wiggle = 0.1
+shader_parameter/tint_color = Vector3(1, 0.75, 0.9)
