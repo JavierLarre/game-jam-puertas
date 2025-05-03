@@ -1,64 +1,99 @@
-[gd_scene load_steps=8 format=3 uid="uid://bo2w5rx77klos"]
+[gd_scene load_steps=11 format=3 uid="uid://bo2w5rx77klos"]
 
-[ext_resource type="Texture2D" uid="uid://8ml3o4wcsosd" path="res://assets/Ilustracion_sin_titulo.png" id="1_5fk4w"]
 [ext_resource type="Script" uid="uid://h8hepgnt35ih" path="res://no se que hago/scripttt.gd" id="1_fjuix"]
+[ext_resource type="Shader" uid="uid://cr5e5b4l461dy" path="res://no se que hago/no se que hago .gdshader" id="2_ah4kr"]
+[ext_resource type="Texture2D" uid="uid://c2ei6171vs58h" path="res://assets/door.png" id="2_fjuix"]
+[ext_resource type="Texture2D" uid="uid://dv20ako02n5cf" path="res://assets/manilla_1.png" id="4_lol4s"]
+[ext_resource type="Texture2D" uid="uid://bj86ckw2y0yk7" path="res://assets/face.png" id="5_ca82h"]
 
-[sub_resource type="Shader" id="Shader_pm6x3"]
-code = "shader_type canvas_item;
-
-uniform vec4 target_color = vec4(1.0, 1.0, 1.0, 1.0);
-uniform vec4 base_color = vec4(0.6039, 0.6039, 0.6039, 1.0);
-
-void fragment() {
-	vec4 tex_color = texture(TEXTURE, UV);
-	if (distance(tex_color.rgb, base_color.rgb) < 0.1) {
-		COLOR = vec4(target_color.rgb, tex_color.a);
-	} else {
-		COLOR = tex_color;
-	}
-}
-"
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ftomg"]
-shader = SubResource("Shader_pm6x3")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lol4s"]
+shader = ExtResource("2_ah4kr")
 shader_parameter/target_color = Vector4(1, 1, 1, 1)
-shader_parameter/base_color = Vector4(0.5569, 0.5569, 0.5569, 1)
+shader_parameter/base_color = Vector4(0, 1, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjuix"]
-bg_color = Color(1, 0, 0, 1)
+bg_color = Color(0.688901, 0.445199, 0.595136, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ah4kr"]
-bg_color = Color(0, 1, 0, 1)
+bg_color = Color(0.922926, 0.876383, 0.898513, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lol4s"]
-bg_color = Color(0, 0, 1, 1)
+bg_color = Color(0.6535, 0.339463, 0.215975, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca82h"]
+bg_color = Color(0.947791, 0.827554, 0.521402, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fjuix")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ftomg")
+[node name="Puerta" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_lol4s")
 position = Vector2(502.5, 525)
 scale = Vector2(0.442871, 0.491211)
-texture = ExtResource("1_5fk4w")
+texture = ExtResource("2_fjuix")
+
+[node name="Manilla" type="Sprite2D" parent="."]
+position = Vector2(502.5, 525)
+scale = Vector2(0.442871, 0.491211)
+texture = ExtResource("4_lol4s")
 
 [node name="Rojo" type="Button" parent="."]
-offset_left = 1139.0
-offset_top = 209.0
-offset_right = 1294.0
-offset_bottom = 350.0
+offset_left = 1169.0
+offset_top = 137.0
+offset_right = 1324.0
+offset_bottom = 278.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_fjuix")
 
 [node name="Verde" type="Button" parent="."]
-offset_left = 1133.0
-offset_top = 454.0
-offset_right = 1288.0
-offset_bottom = 595.0
+offset_left = 1503.0
+offset_top = 136.0
+offset_right = 1658.0
+offset_bottom = 277.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ah4kr")
 
 [node name="Azul" type="Button" parent="."]
-offset_left = 1428.0
-offset_top = 208.0
-offset_right = 1583.0
-offset_bottom = 349.0
+offset_left = 1343.0
+offset_top = 124.0
+offset_right = 1498.0
+offset_bottom = 265.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_lol4s")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 1327.0
+offset_top = 343.0
+offset_right = 1792.0
+offset_bottom = 405.0
+size_flags_horizontal = 8
+item_count = 3
+popup/item_0/text = "Manilla 1"
+popup/item_0/id = 0
+popup/item_1/text = "Manilla 2"
+popup/item_1/id = 1
+popup/item_2/text = "Manilla 3"
+popup/item_2/id = 2
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+offset_left = 1300.0
+offset_top = 428.0
+offset_right = 1765.0
+offset_bottom = 490.0
+size_flags_horizontal = 8
+item_count = 3
+popup/item_0/text = "Manilla 1"
+popup/item_0/id = 0
+popup/item_1/text = "Manilla 2"
+popup/item_1/id = 1
+popup/item_2/text = "Manilla 3"
+popup/item_2/id = 2
+
+[node name="Cara" type="Sprite2D" parent="."]
+position = Vector2(509, 359)
+scale = Vector2(0.12207, 0.12207)
+texture = ExtResource("5_ca82h")
+
+[node name="Verde2" type="Button" parent="."]
+offset_left = 1677.0
+offset_top = 145.0
+offset_right = 1832.0
+offset_bottom = 286.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca82h")

@@ -1,6 +1,7 @@
 extends Node
 
 @onready var building_animation: AnimationPlayer = $Hotel/BuildingAnimation
+@onready var explosion: AudioStreamPlayer = $Explosion
 
 signal building_stopped_moving
 
@@ -15,3 +16,4 @@ func send_building() -> void:
 
 func emit_building_signal(_animation_name) -> void:
 	building_stopped_moving.emit()
+	explosion.play()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqe4kmkbel83k"]
+[gd_scene load_steps=9 format=3 uid="uid://dqe4kmkbel83k"]
 
 [ext_resource type="Texture2D" uid="uid://c3bxk0e6iioru" path="res://assets/hotel.png" id="1_g5gas"]
 [ext_resource type="Script" uid="uid://cjti1xn4ehtfy" path="res://ui/buildings_view.gd" id="1_w14wc"]
 [ext_resource type="Texture2D" uid="uid://stjw6xpir7sj" path="res://assets/linea_de_tren.png" id="2_1pc7p"]
+[ext_resource type="AudioStream" uid="uid://cxocv2b2w5u65" path="res://assets/explosion.wav" id="4_wd3uf"]
 
 [sub_resource type="Animation" id="Animation_waa4j"]
 resource_name = "Arriving"
@@ -140,3 +141,7 @@ mouse_filter = 2
 texture = ExtResource("2_1pc7p")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wd3uf")
+volume_db = 24.0
